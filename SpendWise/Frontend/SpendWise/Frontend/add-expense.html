@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Expense - SpendWise</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        body{
+        margin:0;
+        font-family:Arial;
+
+        background:
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url("back.png");
+
+        background-size:cover;
+        background-position:center;
+        background-repeat:no-repeat;
+
+        min-height:100vh;
+        }
+
+        /* navbar */
+
+        .navbar{
+        background:rgba(0,0,0,0.6);
+        }
+
+        .navbar-brand{
+        color:white;
+        font-weight:700;
+        }
+
+        /* form container */
+
+        .form-container{
+
+        background:white;
+
+        width:450px;
+
+        margin:80px auto;
+
+        padding:40px;
+
+        border-radius:15px;
+
+        box-shadow:0px 8px 25px rgba(0,0,0,0.3);
+
+        }
+
+        /* button */
+
+        .btn-add{
+
+        background:linear-gradient(90deg,#00c6ff,#0072ff);
+
+        border:none;
+
+        border-radius:25px;
+
+        font-weight:600;
+
+        }
+
+        .btn-add:hover{
+
+        background:linear-gradient(90deg,#0072ff,#00c6ff);
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-dark px-4">
+    <span class="navbar-brand">💰 SpendWise</span>
+    <a href="dashboard.html" class="btn btn-light btn-sm">Dashboard</a>
+</nav>
+
+<!-- Form -->
+
+<div class="form-container">
+
+    <h4 class="mb-4 text-center">➕ Add New Expense</h4>
+
+    <form>
+
+        <div class="mb-3">
+            <label>Expense Name</label>
+            <input type="text" class="form-control" placeholder="Example: Food / Taxi / Shopping">
+        </div>
+
+        <div class="mb-3">
+            <label>Amount</label>
+            <input type="number" class="form-control" placeholder="Enter amount">
+        </div>
+
+        <div class="mb-3">
+            <label>Category</label>
+            <select class="form-control">
+                <option>Food</option>
+                <option>Transport</option>
+                <option>Shopping</option>
+                <option>Bills</option>
+                <option>Entertainment</option>
+                <option>Other</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label>Date</label>
+            <input type="date" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label>Description</label>
+            <textarea class="form-control" rows="3" placeholder="Optional"></textarea>
+        </div>
+
+        <button class="btn btn-add w-100">
+            Add Expense
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
