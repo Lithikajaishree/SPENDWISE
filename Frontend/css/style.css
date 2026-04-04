@@ -1,0 +1,92 @@
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Segoe UI', sans-serif;
+    min-height:100vh;
+}
+
+
+.auth-page{
+    display:flex;
+    align-items:center;
+}
+
+
+
+
+.login-bg{
+    background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("../images/back.png");
+    background-size:cover;
+    background-position:center;
+}
+
+.register-bg{
+    background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("../images/img.png");
+    background-size:cover;
+    background-position:center;
+}
+
+.dashboard-bg{
+    background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("../images/dash.png");
+    background-size:cover;
+    background-position:center;
+}
+
+.expense-bg{
+    background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("../images/back.png");
+    background-size:cover;
+    background-position:center;
+}
+
+.profile-bg{
+    background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("../images/img_1.png");
+    background-size:cover;
+    background-position:center;
+}
+
+
+
+
+.form-box{
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    width:400px;
+
+    margin-left:8%;
+    margin-top:120px;
+
+    box-shadow:0px 10px 30px rgba(0,0,0,0.3);
+}
+
+
+
+.profile-box{
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    width:400px;
+    margin:auto;
+    box-shadow:0px 10px 30px rgba(0,0,0,0.3);
+}
+
+
+
+.card{
+    border-radius:15px;
+    box-shadow:0px 5px 15px rgba(0,0,0,0.3);
+}
+
+.btn{
+    border-radius:25px;
+}
