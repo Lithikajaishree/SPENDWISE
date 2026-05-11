@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body class="dashboard-bg">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-dark bg-dark px-4">
+    <span class="navbar-brand">
+        <img src="images/logo.png" width="40" class="me-2">
+        SpendWise Dashboard
+    </span>
+
+    <a href="profile.html" class="btn btn-light btn-sm">Profile</a>
+</nav>
+
+<div class="container mt-5">
+
+    <div class="row text-center">
+
+        <div class="col-md-4">
+            <div class="card p-3">
+                <h5>Total Expenses</h5>
+                <h3 id="totalAmount"></h3>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-3">
+                <h5>Budget</h5>
+                <h3 id="budget"></h3>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-3">
+                <h5>Status</h5>
+                <h3 id="status"></h3>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="mt-4 text-center">
+        <a href="add-expense.html" class="btn btn-primary">Add Expense</a>
+        <a href="expenses.html" class="btn btn-success">View Expenses</a>
+        <a href="budget.html" class="btn btn-warning">Set Budget</a>
+    </div>
+
+    <canvas id="chart" class="mt-5"></canvas>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>

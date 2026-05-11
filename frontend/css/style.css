@@ -1,0 +1,200 @@
+/* ================= BASIC RESET ================= */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+}
+
+/* ================= AUTH PAGE ALIGNMENT ================= */
+.auth-page {
+    display: flex;
+    align-items: center;
+}
+
+/* LEFT ALIGN CONTAINER */
+.container-center {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+/* ================= BACKGROUNDS ================= */
+
+/* LOGIN */
+.login-bg {
+    background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("../images/back.png");
+    background-size: cover;
+    background-position: center;
+}
+
+/* REGISTER */
+.register-bg {
+    background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("../images/img.png");
+    background-size: cover;
+    background-position: center;
+}
+
+/* DASHBOARD */
+.dashboard-bg {
+    background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("../images/dash.png");
+    background-size: cover;
+    background-position: center;
+}
+
+/* EXPENSE */
+.expense-bg {
+    background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("../images/back.png");
+    background-size: cover;
+    background-position: center;
+}
+
+/* PROFILE */
+.profile-bg {
+    background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("../images/img_1.png");
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* ================= FORM BOX ================= */
+.form-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 350px;
+
+    margin-left: 80px;
+    margin-top: 50px;
+
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.3);
+}
+
+
+/* ================= PROFILE BOX ================= */
+.profile-box {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    width: 400px;
+    margin: auto;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.3);
+}
+
+
+/* ================= CARD ================= */
+.card {
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+}
+
+
+/* ================= BUTTON ================= */
+.btn {
+    border-radius: 25px;
+}
+
+
+/* ================= TEXT ================= */
+
+/* Headings on dark background */
+h2, h3, h4, h5 {
+    color: white;
+}
+
+/* Fix for headings inside cards */
+.card h2,
+.card h3,
+.card h4,
+.card h5 {
+    color: black;
+}
+
+/* Paragraph inside cards */
+.card p {
+    color: black;
+}
+
+
+/* ================= LIST ================= */
+.list-group-item {
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+
+/* ================= NAVBAR ================= */
+.navbar {
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+}
+
+
+/* ================= DASHBOARD ================= */
+
+.dashboard-container {
+    margin-top: 60px;
+}
+
+.dashboard-card {
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    background: white;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
+}
+
+.dashboard-card h5 {
+    color: #555;
+    font-weight: 600;
+}
+
+.dashboard-card h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+}
+
+/* Optional left alignment */
+.dashboard-left {
+    margin-left: 80px;
+}
+
+
+/* ================= LOGO ================= */
+img {
+    object-fit: contain;
+}
+
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    .container-center {
+        justify-content: center;
+    }
+
+    .form-box {
+        margin-left: 0;
+        width: 90%;
+    }
+
+    .profile-box {
+        width: 90%;
+    }
+
+    .dashboard-left {
+        margin-left: 0;
+    }
+}
