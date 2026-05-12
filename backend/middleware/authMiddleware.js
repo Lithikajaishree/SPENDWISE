@@ -1,27 +1,29 @@
-id="q7r9mz"
-const jwt = require("jsonwebtoken");
+const jwt = require('jsonwebtoken');
 
-const SECRET = "secretkey";
+const SECRET = 'secretkey';
 
-function auth(req, res, next) {
-    const token = req.headers.authorization;
+function authMiddleware(req, res, next) {
+  const authHeader = req.headers.authorization;
 
-    if (!token) {
-        return res.status(401).json({
-            message: "No token provided"
-        });
-    }
+  if (!authHeader) {
+    return res.status(401).json({ message: 'No token provided' });
+  }
 
-    jwt.verify(token, SECRET, (err, decoded) => {
-        if (err) {
-            return res.status(403).json({
-                message: "Invalid token"
-            });
-        }
+  const parts = authHeader.split(' ');
 
-        req.user = decoded;
-        next();
-    });
+  if (parts.length !== 2 || parts[0] !== 'Bearer') {
+    return res.status(401).json({ message: 'Invalid token format' });
+  }
+
+  const token = parts[1];
+
+  try {
+    const decoded = jwt.verify(token, SECRET);
+    req.user = decoded;
+    next();
+  } catch (err) {
+    return res.status(401).json({ message: 'Invalid or expired token' });
+  }
 }
 
-module.exports = auth;
+module.exports = authMiddleware;

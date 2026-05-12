@@ -1,13 +1,11 @@
-id="7w2qla"
 const express = require("express");
 const router = express.Router();
 
 const db = require("../config/db");
-const auth = require("../middleware/authMiddleware");
-
+const authMiddleware = require('../middleware/authMiddleware');
 
 // ADD EXPENSE
-router.post("/", auth, (req, res) => {
+router.post('/', authMiddleware, (req, res) => {
     const { amount, description, category, date } = req.body;
 
     db.run(
@@ -22,15 +20,15 @@ router.post("/", auth, (req, res) => {
             }
 
             res.json({
-                message: "Expense added successfully"
+                message: "Expense added successfully",
+                id: this.lastID
             });
         }
     );
 });
 
-
 // GET ALL EXPENSES
-router.get("/", auth, (req, res) => {
+router.get('/', authMiddleware, (req, res) => {
     db.all(
         `SELECT * FROM expenses WHERE user_id = ? ORDER BY date DESC`,
         [req.user.id],
@@ -46,9 +44,8 @@ router.get("/", auth, (req, res) => {
     );
 });
 
-
 // DELETE EXPENSE
-router.delete("/:id", auth, (req, res) => {
+router.delete('/:id', authMiddleware, (req, res) => {
     db.run(
         `DELETE FROM expenses WHERE id = ? AND user_id = ?`,
         [req.params.id, req.user.id],
